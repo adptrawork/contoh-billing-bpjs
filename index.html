@@ -34,7 +34,18 @@
   .sub-row { font-weight: 700; border-top: 1px dashed #000; }
   a { color: #2563eb; text-decoration: underline; }
   a:hover { color: #1d4ed8; }
-  @media print { body { margin: 6px; background: #fff; } .no-print { display: none; } .card { border: none; box-shadow: none; padding: 0; } }
+  @media print {
+    @page { size: A4 portrait; margin: 10mm; }
+    body { margin: 0; padding: 0; background: #fff; }
+    .container { max-width: none; width: 100%; margin: 0; }
+    .card { border: none; border-radius: 0; box-shadow: none; padding: 0; margin: 0 0 10px; }
+    .card + .card { page-break-before: always; }
+    .tabel-judul, .tbl, .final-tbl, .struk { max-width: none !important; width: 100% !important; margin-left: 0; margin-right: 0; }
+    .struk { padding: 0; border: none; }
+    table[style*="max-width"], hr[style*="max-width"] { max-width: none !important; width: 100% !important; }
+    .no-print { display: none !important; }
+    tr, td { page-break-inside: avoid; }
+  }
 </style>
 </head>
 <body>
