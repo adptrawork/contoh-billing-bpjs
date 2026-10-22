@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contoh Billing BPJS - RSUD H. ABDUL MANAP</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 16px; font: 12px "arial", "Consolas", "Fixedsys", arial !important; color: #000; background: #f9fafb; }
+  .container { max-width: 720px; margin: 0 auto; }
+  .card { background: #fff; border: 1px solid #d1d5db; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  td { font-size: 12px !important; }
+  .tabel-judul { border-top: 1px dashed #000; border-bottom: 1px dashed #000; width: 100%; max-width: 600px; margin: 5px auto; }
+  .head-cetak-instansi { font-size: 22px; font-family: "Arial Narrow", tahoma; font-weight: 800; }
+  .bold { font-weight: 700; }
+  .num { text-align: right; }
+  .status { font-weight: 700; }
+  .wrong { color: #dc2626; text-decoration: line-through; }
+  .correct { color: #16a34a; font-weight: 700; }
+  .note { font-size: 10px; color: #666; margin-top: 4px; line-height: 1.5; }
+  .note-inline { font-size: 9px; color: #666; }
+  .mismatch { color: #dc2626; }
+  .struk { border: 1px dashed #9ca3af; padding: 14px; max-width: 340px; margin: 0 auto; }
+  .tbl { width: 100%; max-width: 600px; border: 1px solid #000; border-collapse: collapse; }
+  .tbl td, .tbl th { padding: 3px 6px; border: 1px solid #e5e7eb; }
+  .tbl th { background: #f3f4f6; text-align: center; }
+  .final-tbl { width: 100%; max-width: 600px; }
+  .final-tbl td { padding: 3px 6px; border-bottom: 1px dashed #ccc; }
+  .center { text-align: center; }
+  .cat-row { background: #f3f4f6; font-weight: 700; }
+  .sub-row { font-weight: 700; border-top: 1px dashed #000; }
+  a { color: #2563eb; text-decoration: underline; }
+  a:hover { color: #1d4ed8; }
+  @media print { body { margin: 6px; background: #fff; } .no-print { display: none; } .card { border: none; box-shadow: none; padding: 0; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- ===== CETAK DETAIL ===== -->
+<div class="card">
+  <table class="tabel-judul">
+    <tr><td colspan="8" align="center" class="head-cetak-instansi">RSUD H. ABDUL MANAP</td></tr>
+    <tr><td colspan="8" align="center"><strong>NOTA PEMBAYARAN</strong></td></tr>
+  </table>
+
+  <table width="100%" style="max-width:600px;">
+    <tr><td>No. Nota</td><td>:</td><td> (id_billing)</td><td>&nbsp;</td><td>Halaman</td><td>:</td><td>1</td></tr>
+    <tr><td>Pembayaran</td><td>:</td><td colspan="5">&nbsp;&nbsp; RAWAT INAP</td></tr>
+    <tr><td>Unit/Instalasi</td><td>:</td><td colspan="5">&nbsp;&nbsp; VIP</td></tr>
+    <tr><td>No. RM</td><td>:</td><td colspan="5">&nbsp;&nbsp; 00013924</td></tr>
+    <tr><td>Nama Pasien</td><td>:</td><td colspan="5">&nbsp;&nbsp; IRIADI</td></tr>
+    <tr><td>Alamat Pasien</td><td>:</td><td colspan="5">&nbsp;&nbsp; JLN KENALI JAYA RT 02 Mayang Mangurai Alam Barajo KOTA JAMBI JAMBI</td></tr>
+    <tr><td>Penanggung Jawab</td><td>:</td><td colspan="5">&nbsp;&nbsp; IRIADI</td></tr>
+    <tr><td>Dokter</td><td>:</td><td colspan="5">&nbsp;&nbsp; dr. PARANITA UTAMA, Sp.N</td></tr>
+    <tr><td>Golongan Pasien</td><td>:</td><td colspan="5">&nbsp;&nbsp; BPJS KESEHATAN</td></tr>
+    <tr><td>Nama Poli/Bangsal</td><td>:</td><td colspan="5">&nbsp;&nbsp; VIP (02-09-26 s/d 07-09-26)</td></tr>
+  </table>
+
+  <hr style="border:none;border-top:1px dashed #000;width:100%;max-width:600px;margin:5px 0;">
+
+  <p style="font-weight:700;margin:8px 0 4px;">RINCIAN BIAYA</p>
+  <table class="tbl">
+    <tr style="font-weight:700;">
+      <td width="30">No</td>
+      <td>Layanan</td>
+      <td width="80" align="right">Harga</td>
+      <td width="40" align="right">frek</td>
+      <td width="40" align="right">Diskon</td>
+      <td width="90" align="right">Jumlah Rp.</td>
+    </tr>
+    <tr class="cat-row"><td colspan="6">Laboratorium</td></tr>
+    <tr><td>1</td><td>02/09/2026/Creatinin - Creatinin IGD</td><td align="right">26.620</td><td align="right">1</td><td align="right">0</td><td align="right">26.620</td></tr>
+    <tr><td>2</td><td>02/09/2026/DARAH RUTIN 3 Diff - DARAH RUTIN 3 Diff IGD</td><td align="right">54.450</td><td align="right">1</td><td align="right">0</td><td align="right">54.450</td></tr>
+    <tr><td>3</td><td>02/09/2026/Glukosa Sewaktu - Glukosa Sewaktu IGD</td><td align="right">24.200</td><td align="right">1</td><td align="right">0</td><td align="right">24.200</td></tr>
+    <tr><td>4</td><td>02/09/2026/Ureum - Ureum IGD</td><td align="right">26.620</td><td align="right">1</td><td align="right">0</td><td align="right">26.620</td></tr>
+    <tr><td>5</td><td>02/09/2026/ELEKTROLITE - ELEKTROLITE IGD</td><td align="right">193.600</td><td align="right">1</td><td align="right">0</td><td align="right">193.600</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : Laboratorium</td><td align="right">325.490</td></tr>
+    <tr class="cat-row"><td colspan="6">Tindakan Radiologi</td></tr>
+    <tr><td>6</td><td>02/09/2026/THORAX AP/PA + LATERAL - TANPA KELAS - THORAX AP/PA + LATERAL - TANPA KELAS</td><td align="right">150.000</td><td align="right">1</td><td align="right">0</td><td align="right">150.000</td></tr>
+    <tr><td>7</td><td>02/09/2026/CT SCAN KEPALA NON KONTRAS  - TANPA KELAS - CT SCAN KEPALA NON KONTRAS  - TANPA KELAS</td><td align="right">960.000</td><td align="right">1</td><td align="right">0</td><td align="right">960.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : Tindakan Radiologi</td><td align="right">1.110.000</td></tr>
+    <tr class="cat-row"><td colspan="6">Tindakan Dokter/Keperawatan</td></tr>
+    <tr><td>8</td><td>02/09/2026/EKG - EKG</td><td align="right">72.000</td><td align="right">1</td><td align="right">0</td><td align="right">72.000</td></tr>
+    <tr><td>9</td><td>02/09/2026/EKG - EKG</td><td align="right">85.000</td><td align="right">1</td><td align="right">0</td><td align="right">85.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : Tindakan Dokter/Keperawatan</td><td align="right">157.000</td></tr>
+    <tr class="cat-row"><td colspan="6">TINDAKAN KEPERAWATAN</td></tr>
+    <tr><td>10</td><td>02/09/2026/Infus - Infus</td><td align="right">21.600</td><td align="right">1</td><td align="right">0</td><td align="right">21.600</td></tr>
+    <tr><td>11</td><td>02/09/2026/Pemasangan NGT - Pemasangan NGT</td><td align="right">90.000</td><td align="right">1</td><td align="right">0</td><td align="right">90.000</td></tr>
+    <tr><td>12</td><td>02/09/2026/Skintest/ Injeksi - Skintest/ Injeksi</td><td align="right">24.000</td><td align="right">1</td><td align="right">0</td><td align="right">24.000</td></tr>
+    <tr><td>13</td><td>02/09/2026/Suction - Suction</td><td align="right">102.000</td><td align="right">1</td><td align="right">0</td><td align="right">102.000</td></tr>
+    <tr><td>14</td><td>02/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>15</td><td>02/09/2026/INJEKSI SC - INJEKSI SC</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>16</td><td>02/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>17</td><td>02/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>18</td><td>02/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>19</td><td>02/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>20</td><td>02/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">5</td><td align="right">0</td><td align="right">275.000</td></tr>
+    <tr><td>21</td><td>02/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">4</td><td align="right">0</td><td align="right">220.000</td></tr>
+    <tr><td>22</td><td>03/09/2026/PERSONAL DAN ORAL HIGIEN - PERSONAL DAN ORAL HIGIEN</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>23</td><td>03/09/2026/SUCTION - SUCTION</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>24</td><td>03/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>25</td><td>03/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>26</td><td>03/09/2026/SUCTION - SUCTION</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>27</td><td>03/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>28</td><td>03/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>29</td><td>03/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>30</td><td>03/09/2026/SUCTION - SUCTION</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>31</td><td>03/09/2026/SUCTION - SUCTION</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>32</td><td>03/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>33</td><td>03/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">5</td><td align="right">0</td><td align="right">275.000</td></tr>
+    <tr><td>34</td><td>03/09/2026/SUCTION - SUCTION</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>35</td><td>03/09/2026/SUCTION - SUCTION</td><td align="right">55.000</td><td align="right">1</td><td align="right">0</td><td align="right">55.000</td></tr>
+    <tr><td>36</td><td>04/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">3</td><td align="right">0</td><td align="right">165.000</td></tr>
+    <tr><td>37</td><td>04/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">2</td><td align="right">0</td><td align="right">110.000</td></tr>
+    <tr><td>38</td><td>04/09/2026/SUCTION - SUCTION</td><td align="right">55.000</td><td align="right">2</td><td align="right">0</td><td align="right">110.000</td></tr>
+    <tr><td>39</td><td>04/09/2026/INJEKSI IV - INJEKSI IV</td><td align="right">55.000</td><td align="right">2</td><td align="right">0</td><td align="right">110.000</td></tr>
+    <tr><td>40</td><td>04/09/2026/PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG - PEMBERIAN OBAT/ MAKANAN MELALUI MAGSLANG</td><td align="right">55.000</td><td align="right">2</td><td align="right">0</td><td align="right">110.000</td></tr>
+    <tr><td>41</td><td>04/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>42</td><td>04/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>43</td><td>04/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>44</td><td>04/09/2026/Suction - Suction VIP</td><td align="right">50.000</td><td align="right">2</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>45</td><td>05/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">3</td><td align="right">0</td><td align="right">150.000</td></tr>
+    <tr><td>46</td><td>05/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>47</td><td>05/09/2026/Suction - Suction VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>48</td><td>05/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">2</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>49</td><td>05/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">4</td><td align="right">0</td><td align="right">200.000</td></tr>
+    <tr><td>50</td><td>06/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>51</td><td>06/09/2026/Suction - Suction VIP</td><td align="right">50.000</td><td align="right">2</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>52</td><td>06/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>53</td><td>06/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">2</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>54</td><td>06/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>55</td><td>06/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">4</td><td align="right">0</td><td align="right">200.000</td></tr>
+    <tr><td>56</td><td>07/09/2026/Personal dan oral hygiene - Personal dan oral hygiene VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>57</td><td>07/09/2026/Suction - Suction VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>58</td><td>07/09/2026/Perawatan infus / 3 hari - Perawatan infus / 3 hari VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>59</td><td>07/09/2026/Perawatan kateter / 3 hari - Perawatan kateter / 3 hari VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>60</td><td>07/09/2026/AFF /lepas infus - AFF /lepas infus VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>61</td><td>07/09/2026/injeksi (IV/IM/SC ) ( Baru) - injeksi (IV/IM/SC ) ( Baru) VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : TINDAKAN KEPERAWATAN</td><td align="right">4.307.600</td></tr>
+    <tr class="cat-row"><td colspan="6">SEWA ALAT</td></tr>
+    <tr><td>62</td><td>02/09/2026/Infus Pump - Infus Pump</td><td align="right">24.000</td><td align="right">1</td><td align="right">0</td><td align="right">24.000</td></tr>
+    <tr><td>63</td><td>02/09/2026/Monitor - Monitor</td><td align="right">36.000</td><td align="right">1</td><td align="right">0</td><td align="right">36.000</td></tr>
+    <tr><td>64</td><td>02/09/2026/INFUSION PUMP - INFUSION PUMP</td><td align="right">85.000</td><td align="right">1</td><td align="right">0</td><td align="right">85.000</td></tr>
+    <tr><td>65</td><td>02/09/2026/MONITOR PER HARI - MONITOR PER HARI</td><td align="right">56.250</td><td align="right">1</td><td align="right">0</td><td align="right">56.250</td></tr>
+    <tr><td>66</td><td>02/09/2026/SYRING PUMP - SYRING PUMP</td><td align="right">85.000</td><td align="right">1</td><td align="right">0</td><td align="right">85.000</td></tr>
+    <tr><td>67</td><td>03/09/2026/INFUSION PUMP - INFUSION PUMP</td><td align="right">85.000</td><td align="right">1</td><td align="right">0</td><td align="right">85.000</td></tr>
+    <tr><td>68</td><td>03/09/2026/MONITOR PER HARI - MONITOR PER HARI</td><td align="right">56.250</td><td align="right">1</td><td align="right">0</td><td align="right">56.250</td></tr>
+    <tr><td>69</td><td>03/09/2026/SYRING PUMP - SYRING PUMP</td><td align="right">85.000</td><td align="right">1</td><td align="right">0</td><td align="right">85.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : SEWA ALAT</td><td align="right">512.500</td></tr>
+    <tr class="cat-row"><td colspan="6">OKSIGEN</td></tr>
+    <tr><td>70</td><td>02/09/2026/Pemakaian oksigen untuk dewasa per jam - Pemakaian oksigen untuk dewasa per jam</td><td align="right">4.800</td><td align="right">1</td><td align="right">0</td><td align="right">4.800</td></tr>
+    <tr><td>71</td><td>02/09/2026/OKSIGEN LITER/MENIT  PER 1 JAM - OKSIGEN LITER/MENIT  PER 1 JAM</td><td align="right">4.800</td><td align="right">24</td><td align="right">0</td><td align="right">115.200</td></tr>
+    <tr><td>72</td><td>03/09/2026/OKSIGEN LITER/MENIT  PER 1 JAM - OKSIGEN LITER/MENIT  PER 1 JAM</td><td align="right">4.800</td><td align="right">24</td><td align="right">0</td><td align="right">115.200</td></tr>
+    <tr><td>73</td><td>04/09/2026/OKSIGEN 9 LITER/MENIT  PER 1 JAM - OKSIGEN 9 LITER/MENIT  PER 1 JAM VIP</td><td align="right">4.000</td><td align="right">11</td><td align="right">0</td><td align="right">44.000</td></tr>
+    <tr><td>74</td><td>05/09/2026/OKSIGEN 9 LITER/MENIT  PER 1 JAM - OKSIGEN 9 LITER/MENIT  PER 1 JAM VIP</td><td align="right">4.000</td><td align="right">24</td><td align="right">0</td><td align="right">96.000</td></tr>
+    <tr><td>75</td><td>06/09/2026/OKSIGEN 9 LITER/MENIT  PER 1 JAM - OKSIGEN 9 LITER/MENIT  PER 1 JAM VIP</td><td align="right">4.000</td><td align="right">24</td><td align="right">0</td><td align="right">96.000</td></tr>
+    <tr><td>76</td><td>07/09/2026/OKSIGEN 9 LITER/MENIT  PER 1 JAM - OKSIGEN 9 LITER/MENIT  PER 1 JAM VIP</td><td align="right">4.000</td><td align="right">12</td><td align="right">0</td><td align="right">48.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : OKSIGEN</td><td align="right">519.200</td></tr>
+    <tr class="cat-row"><td colspan="6">VISITE</td></tr>
+    <tr><td>77</td><td>02/09/2026/Periksa Dokter Spesialis - Periksa Dokter Spesialis</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>78</td><td>02/09/2026/Periksa Dokter Spesialis - Periksa Dokter Spesialis</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>79</td><td>02/09/2026/Periksa Dokter Umum UGD - Periksa Dokter Umum UGD</td><td align="right">35.000</td><td align="right">1</td><td align="right">0</td><td align="right">35.000</td></tr>
+    <tr><td>80</td><td>02/09/2026/VISIT DOKTER UMUM - VISIT DOKTER UMUM</td><td align="right">70.000</td><td align="right">1</td><td align="right">0</td><td align="right">70.000</td></tr>
+    <tr><td>81</td><td>03/09/2026/VISIT DOKTER UMUM - VISIT DOKTER UMUM</td><td align="right">70.000</td><td align="right">1</td><td align="right">0</td><td align="right">70.000</td></tr>
+    <tr><td>82</td><td>04/09/2026/Visit dokter umum - Visit dokter umum VIP</td><td align="right">100.000</td><td align="right">1</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>83</td><td>05/09/2026/Visit dokter spesialis - Visit dokter spesialis VIP</td><td align="right">230.000</td><td align="right">1</td><td align="right">0</td><td align="right">230.000</td></tr>
+    <tr><td>84</td><td>05/09/2026/Visit dokter umum - Visit dokter umum VIP</td><td align="right">100.000</td><td align="right">1</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>85</td><td>06/09/2026/Visit dokter umum - Visit dokter umum VIP</td><td align="right">100.000</td><td align="right">1</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>86</td><td>07/09/2026/Visit dokter umum - Visit dokter umum VIP</td><td align="right">100.000</td><td align="right">1</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>87</td><td>07/09/2026/Visit dokter spesialis - Visit dokter spesialis VIP</td><td align="right">230.000</td><td align="right">1</td><td align="right">0</td><td align="right">230.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : VISITE</td><td align="right">1.135.000</td></tr>
+    <tr class="cat-row"><td colspan="6">KAMAR</td></tr>
+    <tr><td>88</td><td>02/09/2026/BIAYA KAMAR - BIAYA KAMAR</td><td align="right">343.750</td><td align="right">1</td><td align="right">0</td><td align="right">343.750</td></tr>
+    <tr><td>89</td><td>03/09/2026/BIAYA KAMAR - BIAYA KAMAR</td><td align="right">343.750</td><td align="right">1</td><td align="right">0</td><td align="right">343.750</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : KAMAR</td><td align="right">687.500</td></tr>
+    <tr class="cat-row"><td colspan="6">Askep</td></tr>
+    <tr><td>90</td><td>02/09/2026/ASUHAN KEPERAWATAN - ASUHAN KEPERAWATAN</td><td align="right">70.000</td><td align="right">1</td><td align="right">0</td><td align="right">70.000</td></tr>
+    <tr><td>91</td><td>03/09/2026/ASUHAN KEPERAWATAN - ASUHAN KEPERAWATAN</td><td align="right">70.000</td><td align="right">1</td><td align="right">0</td><td align="right">70.000</td></tr>
+    <tr><td>92</td><td>04/09/2026/Asuhan Keperawatan - Asuhan Keperawatan VIP</td><td align="right">90.000</td><td align="right">1</td><td align="right">0</td><td align="right">90.000</td></tr>
+    <tr><td>93</td><td>05/09/2026/Asuhan Keperawatan - Asuhan Keperawatan VIP</td><td align="right">90.000</td><td align="right">1</td><td align="right">0</td><td align="right">90.000</td></tr>
+    <tr><td>94</td><td>06/09/2026/Asuhan Keperawatan - Asuhan Keperawatan VIP</td><td align="right">90.000</td><td align="right">1</td><td align="right">0</td><td align="right">90.000</td></tr>
+    <tr><td>95</td><td>07/09/2026/Asuhan Keperawatan - Asuhan Keperawatan VIP</td><td align="right">90.000</td><td align="right">1</td><td align="right">0</td><td align="right">90.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : Askep</td><td align="right">500.000</td></tr>
+    <tr class="cat-row"><td colspan="6">Administrasi</td></tr>
+    <tr><td>96</td><td>03/09/2026/ADMINISTRASI MINGGU I - ADMINISTRASI MINGGU I</td><td align="right">75.000</td><td align="right">1</td><td align="right">0</td><td align="right">75.000</td></tr>
+    <tr><td>97</td><td>04/09/2026/Administrasi ( Minggu 1 ) - Administrasi ( Minggu 1 ) VIP</td><td align="right">75.000</td><td align="right">1</td><td align="right">0</td><td align="right">75.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : Administrasi</td><td align="right">150.000</td></tr>
+    <tr class="cat-row"><td colspan="6">Paket makan minum pasien</td></tr>
+    <tr><td>98</td><td>03/09/2026/PAKET MAKAN MINUM PASIEN - PAKET MAKAN MINUM PASIEN I</td><td align="right">50.000</td><td align="right">2</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>99</td><td>04/09/2026/PAKET MAKAN MINUM PASIEN - PAKET MAKAN MINUM PASIEN I</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>100</td><td>05/09/2026/PAKET MAKAN MINUM PASIEN - PAKET MAKAN MINUM PASIEN VIP</td><td align="right">70.000</td><td align="right">1</td><td align="right">0</td><td align="right">70.000</td></tr>
+    <tr><td>101</td><td>06/09/2026/PAKET MAKAN MINUM PASIEN - PAKET MAKAN MINUM PASIEN VIP</td><td align="right">70.000</td><td align="right">1</td><td align="right">0</td><td align="right">70.000</td></tr>
+    <tr><td>102</td><td>07/09/2026/PAKET MAKAN MINUM PASIEN - PAKET MAKAN MINUM PASIEN VIP</td><td align="right">70.000</td><td align="right">1</td><td align="right">0</td><td align="right">70.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : Paket makan minum pasien</td><td align="right">360.000</td></tr>
+    <tr class="cat-row"><td colspan="6">TINDAKAN</td></tr>
+    <tr><td>103</td><td>04/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>104</td><td>04/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>105</td><td>04/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>106</td><td>04/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>107</td><td>05/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>108</td><td>05/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>109</td><td>05/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>110</td><td>05/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>111</td><td>05/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>112</td><td>05/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>113</td><td>06/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>114</td><td>06/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">2</td><td align="right">0</td><td align="right">100.000</td></tr>
+    <tr><td>115</td><td>06/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>116</td><td>06/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">3</td><td align="right">0</td><td align="right">150.000</td></tr>
+    <tr><td>117</td><td>07/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>118</td><td>07/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr><td>119</td><td>07/09/2026/Pemberian Diit Cair via NGT - Pemberian Diit Cair via NGT VIP</td><td align="right">50.000</td><td align="right">1</td><td align="right">0</td><td align="right">50.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : TINDAKAN</td><td align="right">1.000.000</td></tr>
+    <tr class="cat-row"><td colspan="6">SEWA KAMAR</td></tr>
+    <tr><td>120</td><td>04/09/2026/VIP - VIP VIP</td><td align="right">650.000</td><td align="right">1</td><td align="right">0</td><td align="right">650.000</td></tr>
+    <tr><td>121</td><td>05/09/2026/VIP - VIP VIP</td><td align="right">650.000</td><td align="right">1</td><td align="right">0</td><td align="right">650.000</td></tr>
+    <tr><td>122</td><td>06/09/2026/VIP - VIP VIP</td><td align="right">650.000</td><td align="right">1</td><td align="right">0</td><td align="right">650.000</td></tr>
+    <tr><td>123</td><td>07/09/2026/VIP - VIP VIP</td><td align="right">650.000</td><td align="right">1</td><td align="right">0</td><td align="right">650.000</td></tr>
+    <tr class="sub-row"><td colspan="5">SubTotal : SEWA KAMAR</td><td align="right">2.600.000</td></tr>
+    <tr class="bold" style="border-top:2px solid #000;"><td colspan="5">Total Rp.</td><td align="right"><span class="wrong"><a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">13.364.290</a></span> <span class="correct">&rarr; <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a></span></td></tr>
+  </table>
+  <p class="note">Rincian lengkap per item (123 item). Total rincian = 13.364.290. Total Tagihan (verifikasi) = <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a> — <span class="wrong"><a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">13.364.290</a></span> <span class="correct">→ 15.814.708</span> (mismatch, merah/coret).</p>
+
+  <hr style="border:none;border-top:1px dashed #000;width:100%;max-width:600px;margin:5px 0;">
+
+  <table class="final-tbl">
+    <tr class="bold"><td>Total Keseluruhan</td><td class="num"><span class="wrong"><a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">13.364.290</a></span> <span class="correct">→ <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a></span></td></tr>
+    <tr><td>Biaya Administrasi</td><td class="num">0</td></tr>
+    <tr><td>Biaya Materai</td><td class="num">0</td></tr>
+    <tr><td>Klaim Asuransi (BPJS)</td><td class="num"><span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-ringkas?id_visit=197876" target="_blank" rel="noopener noreferrer">0 (ringkas, bug)</a></span> <span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-purwo?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708 (purwo, salah)</a></span> <span class="correct">→ <a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">11.196.683</a></span></td></tr>
+    <tr><td>Diskon</td><td class="num">0</td></tr>
+    <tr><td>Uang Muka</td><td class="num">0</td></tr>
+    <tr><td>Pembulatan</td><td class="num">0</td></tr>
+    <tr class="bold"><td>Total Tagihan</td><td class="num"><span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">0 (ringkas/struk, bug)</a></span> <span class="correct">→ <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a></span></td></tr>
+    <tr class="bold"><td>Bayar</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">4.618.025</a></td></tr>
+    <tr class="bold"><td>Sisa Tagihan</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-ringkas?id_visit=197876" target="_blank" rel="noopener noreferrer">0</a></td></tr>
+    <tr class="bold"><td>Status</td><td class="num">Lunas</td></tr>
+    <tr><td colspan="2">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px;">
+        <div style="text-align:center;">
+          <div style="border-bottom:1px dashed #000;padding-bottom:4px;margin-bottom:4px;">Yang Menyerahkan</div>
+          <div style="height:40px;"></div>
+          <div>Kota Jambi, 07 September 2026</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="border-bottom:1px dashed #000;padding-bottom:4px;margin-bottom:4px;">Yang Menerima</div>
+          <div style="height:40px;"></div>
+          <div>IRIADI</div>
+          <div>Apotek Rawat Jalan</div>
+        </div>
+      </div>
+    </td></tr>
+  </table>
+  
+</div>
+
+<!-- ===== CETAK STRUK ===== -->
+<div class="card">
+  <table class="tabel-judul">
+    <tr><td colspan="2" align="center"><strong>STRUK PEMBAYARAN</strong></td></tr>
+  </table>
+  <table style="max-width:300px;margin:0 auto;">
+    <tr><td>No. RM</td><td>: 00013924</td></tr>
+    <tr><td>Nama</td><td>: IRIADI</td></tr>
+    <tr><td>Tanggal</td><td>: 07/09/2026</td></tr>
+  </table>
+  <hr style="border:none;border-top:1px dashed #000;max-width:300px;margin:5px auto;">
+  <table class="final-tbl" style="max-width:300px;margin:0 auto;">
+    <tr><td>Tanggungan Pasien</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">4.618.025</a></td></tr>
+    <tr><td>Klaim BPJS</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">11.196.683</a></td></tr>
+    <tr><td>Dibayar</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">4.618.025</a></td></tr>
+    <tr><td>Sisa Tagihan</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-ringkas?id_visit=197876" target="_blank" rel="noopener noreferrer">0</a></td></tr>
+    <tr class="bold"><td>Status</td><td class="num">Lunas</td></tr>
+  </table>
+  <p class="note" style="text-align:center;">Struk ini merupakan bukti pembayaran yang sah.</p>
+</div>
+
+<p class="no-print" style="font-size:10px; color:#666; margin-top:12px;">
+  Hanya dua jenis cetak: <strong>Cetak Detail</strong> (rincian + ringkasan akhir) dan <strong>Cetak Struk</strong> (ringkas).
+  Hilangkan cetak Lengkap/Singkat/Gabung/Ringkas yang membingungkan.
+</p>
+
+<!-- ===== Sumber Verifikasi: Semua URL Morbis (IRIADI, id_visit=197876) ===== -->
+<div class="card no-print" style="font-size:11px;">
+  <h3 style="margin-top:0;">Sumber Verifikasi — Seluruh Halaman Billing Morbis (IRIADI, id_visit=197876)</h3>
+  <p class="note">Setiap nilai pada Cetak Detail &amp; Struk di atas ditautkan langsung ke halaman sumber Morbis. Tabel ini adalah ringkasan lengkap semua URL yang diperiksa, apa yang ditampilkan, dan mana yang benar/salah.</p>
+  <table style="width:100%;border-collapse:collapse;font-size:10px;">
+    <thead>
+      <tr style="background:#000;color:#fff;">
+        <th style="padding:4px;text-align:left;">URL (di basis 103.147.236.140)</th>
+        <th style="padding:4px;text-align:left;">Ditampilkan</th>
+        <th style="padding:4px;text-align:left;">Nilai</th>
+        <th style="padding:4px;text-align:left;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">data-tagihan</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. (123 rincian item)</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">13.364.290</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="wrong">13.364.290</span> — salah, tidak termasuk item tertentu</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">data-tagihan-v2</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. + Total Tagihan (verifikasi)</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">15.814.708</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">15.814.708</span> — benar</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-gabung</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim BPJS, Bayar / Tanggungan</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim 11.196.683, Bayar 4.618.025</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">11.196.683 / 4.618.025</span> — benar. Catatan: label “Total Tagihan” di sini = 4.618.025 adalah tanggungan pasien, bukan total tagihan</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-purwo?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-gabung-purwo</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim BPJS, Total Tagihan</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim 15.814.708, Total Tagihan 15.814.708</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="wrong">15.814.708</span> pada Klaim — salah, menampilkan total sebagai klaim. Total Tagihan 15.814.708 benar</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-ringkas-new</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim, Total Tagihan</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim 11.196.683, Total Tagihan 0</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">11.196.683</span> Klaim benar. <span class="wrong">0</span> Total Tagihan — bug, selalu 0</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-ringkas?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-gabung-ringkas</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim, Total Tagihan, Bayar</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Klaim 0, Total Tagihan 15.563.900, Bayar 4.618.025</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="wrong">0 (bug Undefined index KLAIM_BPJS)</span>, <span class="wrong">15.563.900</span> — Total berbeda. Bayar 4.618.025 benar</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">pembayaran-gabung-asuransi <span class="note-inline">(404 untuk akun apotek_rajal — perlu akses asuransi)</span></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Saldo Pembayaran setelah pembulatan</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">2.460.018</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Perhitungan terpisah (asuransi) — bukan sumber untuk total/tagihan BPJS. Halaman tidak dapat diakses dengan akun apotek_rajal (404)</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/verifikasi-billing/report/nota-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">verifikasi-billing / report / nota-tagihan</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Jumlah / Sisa Tagihan</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Jumlah 11.196.683, Sisa 11.196.683</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Nota tagihan = klaim BPJS (11.196.683), bukan total keseluruhan</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/verifikasi-billing/report/kwitansi?id_visit=197876" target="_blank" rel="noopener noreferrer">verifikasi-billing / report / kwitansi</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Kwitansi pembayaran</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Rp. 11.196.683</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">11.196.683</span> — benar (klaim BPJS)</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/pembayaran-new/detail-billing?id_billing=307559&amp;id_pasien=13924&amp;pasien=IRIADI" target="_blank" rel="noopener noreferrer">pembayaran-new / detail-billing</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Sumber Cetak Detail (rincian per item)</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">123 item, total rincian 13.364.290, Total Tagihan Pasien 15.814.708</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Rincian item sumber untuk Cetak Detail. Total 13.364.290 ≠ 15.814.708</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/detail_biling_new?id_billing=307559&amp;id_pasien=13924&amp;pasien=IRIADI" target="_blank" rel="noopener noreferrer">detail_biling_new</a></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Tagihan Pasien</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">15.814.708</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">15.814.708</span> — benar</td>
+      </tr>
+      <tr>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">billing/pembayaran-bpjs</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Form input pembayaran (bukan laporan)</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">—</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Form input, bukan laporan verifikasi</td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="note" style="margin-bottom:0;">Nilai acuan (benar): Total 15.814.708 · Klaim BPJS 11.196.683 · Tanggungan Pasien 4.618.025 · Dibayar 4.618.025 · Sisa 0 · Status Lunas. Semua URL memakai <code>id_visit=197876</code>; URL <code>detail_biling_new</code> dan <code>pembayaran-new/detail-billing</code> memakai <code>id_billing=307559&amp;id_pasien=13924&amp;pasien=IRIADI</code>.</p>
+</div>
+
+</div>
+</body>
+</html>
