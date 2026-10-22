@@ -19,6 +19,9 @@
   .correct { color: #16a34a; font-weight: 700; }
   .note { font-size: 10px; color: #666; margin-top: 4px; line-height: 1.5; }
   .note-inline { font-size: 9px; color: #666; }
+  .verif-tbl td { vertical-align: top; }
+  .verif-list { margin: 0; padding-left: 14px; }
+  .verif-list li { margin: 0; }
   .mismatch { color: #dc2626; }
   .struk { border: 1px dashed #9ca3af; padding: 14px; max-width: 340px; margin: 0 auto; }
   .tbl { width: 100%; max-width: 600px; border: 1px solid #000; border-collapse: collapse; }
@@ -591,7 +594,7 @@
 <div class="card no-print" style="font-size:11px;">
   <h3 style="margin-top:0;">Sumber Verifikasi — Seluruh Halaman Billing Morbis (IRIADI, id_visit=197876)</h3>
   <p class="note">Setiap nilai pada Cetak Detail &amp; Struk di atas ditautkan langsung ke halaman sumber Morbis. Tabel ini adalah ringkasan lengkap semua URL yang diperiksa, apa yang ditampilkan, dan mana yang benar/salah.</p>
-  <table style="width:100%;border-collapse:collapse;font-size:10px;">
+  <table class="verif-tbl" style="width:100%;border-collapse:collapse;font-size:10px;">
     <thead>
       <tr style="background:#000;color:#fff;">
         <th style="padding:4px;text-align:left;">URL (di basis 103.147.236.140)</th>
@@ -603,38 +606,38 @@
     <tbody>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">data-tagihan</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. · Sub total Penjualan · Total Tagihan · Pembulatan</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">13.364.290 · 2.460.018 · 16.116.308 · 0</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Total Rp.</li><li>Sub total Penjualan</li><li>Total Tagihan</li><li>Pembulatan</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>13.364.290</li><li>2.460.018</li><li>16.116.308</li><li>0</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. 13.364.290 sama dengan halaman lain. <span class="wrong">Total Tagihan 16.116.308</span> — salah (benar 15.814.708)</td>
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">data-tagihan-v2</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. · Sub total Penjualan · Total Tagihan · Pembulatan</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">13.364.290 · 2.158.418 · 15.814.708 · 0</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Total Rp.</li><li>Sub total Penjualan</li><li>Total Tagihan</li><li>Pembulatan</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>13.364.290</li><li>2.158.418</li><li>15.814.708</li><li>0</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">Total Tagihan 15.814.708</span> — benar</td>
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-gabung</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. · Sub total Penjualan · Total Penjualan · Total · Klaim Asuransi · Diskon · Uang Muka · Pembulatan · Total Tagihan · Bayar · Kembali</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">13.364.290 · 2.199.518 · 2.491.518 · 15.855.808 · 11.196.683 · 0 · 0 · 0 · 4.618.025 · 4.618.025 · 0</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Total Rp.</li><li>Sub total Penjualan</li><li>Total Penjualan</li><li>Total</li><li>Klaim Asuransi</li><li>Diskon</li><li>Uang Muka</li><li>Pembulatan</li><li>Total Tagihan</li><li>Bayar</li><li>Kembali</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>13.364.290</li><li>2.199.518</li><li>2.491.518</li><li>15.855.808</li><li>11.196.683</li><li>0</li><li>0</li><li>0</li><li>4.618.025</li><li>4.618.025</li><li>0</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">Klaim 11.196.683</span> dan <span class="correct">Bayar 4.618.025</span> benar. Label “Total Tagihan” = 4.618.025 adalah tanggungan pasien (bukan total tagihan). “Total” 15.855.808 berbeda dari 15.814.708</td>
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-purwo?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-gabung-purwo</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. · Sub total Penjualan · Klaim Asuransi · Total Tagihan · Bayar</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">13.364.290,00 · 2.158.418,00 · 15.814.708,00 · 15.814.708,00 · 4.618.025,00</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Total Rp.</li><li>Sub total Penjualan</li><li>Klaim Asuransi</li><li>Total Tagihan</li><li>Bayar</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>13.364.290,00</li><li>2.158.418,00</li><li>15.814.708,00</li><li>15.814.708,00</li><li>4.618.025,00</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="wrong">Klaim 15.814.708</span> — salah (menampilkan total sebagai klaim). <span class="correct">Total Tagihan 15.814.708</span> benar. Bayar 4.618.025 benar</td>
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-ringkas-new</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Rp. · Sub total Penjualan · Klaim Asuransi · Pembulatan · Total Tagihan · Bayar</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">13.364.290 · 2.158.418 · 11.196.683 · 0 · 0 · 4.618.025</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Total Rp.</li><li>Sub total Penjualan</li><li>Klaim Asuransi</li><li>Pembulatan</li><li>Total Tagihan</li><li>Bayar</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>13.364.290</li><li>2.158.418</li><li>11.196.683</li><li>0</li><li>0</li><li>4.618.025</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">Klaim 11.196.683</span> benar. <span class="wrong">Total Tagihan 0</span> — bug. Bayar 4.618.025 benar</td>
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-ringkas?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-gabung-ringkas</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Obat Penjualan Apotek · Total · Diskon · Pembulatan · Total Tagihan · Bayar · Kembali</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">2.199.518 · 15.563.808 · 0 · 92 · 15.563.900 · 4.618.025 · 0</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Obat Penjualan Apotek</li><li>Total</li><li>Diskon</li><li>Pembulatan</li><li>Total Tagihan</li><li>Bayar</li><li>Kembali</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>2.199.518</li><li>15.563.808</li><li>0</li><li>92</li><li>15.563.900</li><li>4.618.025</li><li>0</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="wrong">Pembulatan 92</span> dan <span class="wrong">Total Tagihan 15.563.900</span> — salah. Bayar 4.618.025 benar. Baris Klaim &amp; Sisa Tagihan ada <em>di dalam komentar HTML</em> (tidak tampil) dan berisi error <code>Undefined index: KLAIM_BPJS</code></td>
       </tr>
       <tr>
@@ -645,8 +648,8 @@
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/verifikasi-billing/report/nota-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">verifikasi-billing / report / nota-tagihan</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Jumlah Rp. · Sisa tagihan Rp.</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">11.196.683 · 11.196.683</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Jumlah Rp.</li><li>Sisa tagihan Rp.</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>11.196.683</li><li>11.196.683</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;">Menampilkan klaim BPJS (11.196.683), bukan total keseluruhan</td>
       </tr>
       <tr>
@@ -663,8 +666,8 @@
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/detail_biling_new?id_billing=307559&amp;id_pasien=13924&amp;pasien=IRIADI&amp;id_visit=197876" target="_blank" rel="noopener noreferrer">detail_biling_new</a></td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Total Tagihan Pasien · Total Deposit Pasien · Sisa Tagihan Pasien</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">15.814.708 · (kosong) · 15.814.708</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>Total Tagihan Pasien</li><li>Total Deposit Pasien</li><li>Sisa Tagihan Pasien</li></ul></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;"><ul class="verif-list"><li>15.814.708</li><li>(kosong)</li><li>15.814.708</li></ul></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="correct">15.814.708</span> — benar. Wajib <code>id_visit</code> — tanpa itu error “Undefined index: id_visit”</td>
       </tr>
       <tr>
