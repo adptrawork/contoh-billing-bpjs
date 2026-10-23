@@ -46,11 +46,41 @@
     .no-print { display: none !important; }
     tr, td { page-break-inside: avoid; }
   }
+
+  /* ===== TABS ===== */
+  .tab-bar { display: flex; gap: 4px; margin-bottom: 12px; border-bottom: 2px solid #d1d5db; }
+  .tab-bar input[type="radio"] { display: none; }
+  .tab-bar label { padding: 8px 16px; cursor: pointer; font-weight: 600; color: #6b7280; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: color .15s, border-color .15s; }
+  .tab-bar label:hover { color: #111827; }
+  .tab-bar input:checked + label { color: #2563eb; border-bottom-color: #2563eb; }
+  .tab-content { display: none; }
+  #tab-detail:checked ~ #content-detail,
+  #tab-struk:checked ~ #content-struk,
+  #tab-penjelasan:checked ~ #content-penjelasan { display: block; }
+  /* Print: tampilkan semua tab */
+  @media print {
+    .tab-bar { display: none; }
+    .tab-content { display: block !important; }
+  }
+
 </style>
 </head>
 <body>
 <div class="container">
 
+  <!-- ===== TAB RADIOS (hidden, control visibility) ===== -->
+  <input type="radio" name="tab" id="tab-detail" checked style="display:none;">
+  <input type="radio" name="tab" id="tab-struk" style="display:none;">
+  <input type="radio" name="tab" id="tab-penjelasan" style="display:none;">
+
+  <!-- ===== TAB BAR ===== -->
+  <div class="tab-bar no-print">
+    <label for="tab-detail">Cetak Detail</label>
+    <label for="tab-struk">Cetak Struk</label>
+    <label for="tab-penjelasan">Penjelasan</label>
+  </div>
+
+  <div class="tab-content" id="content-detail">
 <!-- ===== CETAK DETAIL ===== -->
 <div class="card">
   <table class="tabel-judul">
@@ -234,6 +264,159 @@
     <tr class="sub-row"><td colspan="5">SubTotal : SEWA KAMAR</td><td align="right">2.600.000</td></tr>
     <tr class="bold" style="border-top:2px solid #000;"><td colspan="5">Total Rp.</td><td align="right"><a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">13.364.290</a></td></tr>
   </table>
+
+  <p style="font-weight:700;margin:12px 0 4px;">RINCIAN OBAT / PENJUALAN APOTEK <span class="note-inline">(137 item — sumber: <a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">pembayaran-ringkas-new</a>)</span></p>
+  <table class="tbl">
+    <tr style="font-weight:700;">
+      <td width="30">No</td>
+      <td>Nama Obat</td>
+      <td width="50" align="right">Frek</td>
+      <td width="110" align="right">Subtotal (Rp.)</td>
+    </tr>
+    <tr><td>1</td><td>Azitromycin Tablet 500 Mg</td><td align="right">2</td><td align="right">8.332</td></tr>
+    <tr><td>2</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">1</td><td align="right">13.120</td></tr>
+    <tr><td>3</td><td>Furosemid Injeksi 10 mg</td><td align="right">1</td><td align="right">4.435</td></tr>
+    <tr><td>4</td><td>Spuit 3ml</td><td align="right">1</td><td align="right">1.232</td></tr>
+    <tr><td>5</td><td>Masker NRM Dewasa</td><td align="right">1</td><td align="right">18.566</td></tr>
+    <tr><td>6</td><td>NACL 0.9% Infus 500ml</td><td align="right">1</td><td align="right">9.821</td></tr>
+    <tr><td>7</td><td>RL Infus 500 ml</td><td align="right">1</td><td align="right">11.423</td></tr>
+    <tr><td>8</td><td>DIAZEPAM INJEKSI 10 MG/2 ML</td><td align="right">1</td><td align="right">0</td></tr>
+    <tr><td>9</td><td>Stomach Tube Fr 14</td><td align="right">1</td><td align="right">15.418</td></tr>
+    <tr><td>10</td><td>Infuset Dewasa</td><td align="right">1</td><td align="right">9.946</td></tr>
+    <tr><td>11</td><td>Spuit 5 Ml</td><td align="right">3</td><td align="right">5.115</td></tr>
+    <tr><td>12</td><td>Spuit 3ml</td><td align="right">3</td><td align="right">3.696</td></tr>
+    <tr><td>13</td><td>Spuit 10 Ml</td><td align="right">3</td><td align="right">7.671</td></tr>
+    <tr><td>14</td><td>Spuit 50 Ml Catheter Tip (Onemed)</td><td align="right">1</td><td align="right">6.233</td></tr>
+    <tr><td>15</td><td>Three Way Stopcock</td><td align="right">1</td><td align="right">6.820</td></tr>
+    <tr><td>16</td><td>Suction Catheter No. 14</td><td align="right">1</td><td align="right">3.584</td></tr>
+    <tr><td>17</td><td>GUEDEL 110 MM</td><td align="right">1</td><td align="right">28.022</td></tr>
+    <tr><td>18</td><td>Omeprazol Injeksi 40 mg</td><td align="right">1</td><td align="right">7.104</td></tr>
+    <tr><td>19</td><td>Sucralfate Suspensi 500 mg/5 ml</td><td align="right">1</td><td align="right">9.600</td></tr>
+    <tr><td>20</td><td>Citicoline Tablet 500 mg</td><td align="right">2</td><td align="right">10.754</td></tr>
+    <tr><td>21</td><td>Ondansentron Injeksi 4 mg/ 2 ml</td><td align="right">1</td><td align="right">1.695</td></tr>
+    <tr><td>22</td><td>Furosemid Injeksi 10 mg</td><td align="right">2</td><td align="right">8.870</td></tr>
+    <tr><td>23</td><td>Midazolam Injeksi 1mg/ml</td><td align="right">1</td><td align="right">11.278</td></tr>
+    <tr><td>24</td><td>Fenitoin Sulfate injeksi 250mg/ml</td><td align="right">1</td><td align="right">5.683</td></tr>
+    <tr><td>25</td><td>Infuset Dewasa</td><td align="right">1</td><td align="right">9.946</td></tr>
+    <tr><td>26</td><td>Three Way Stopcock</td><td align="right">1</td><td align="right">6.820</td></tr>
+    <tr><td>27</td><td>RL Infus 500 ml</td><td align="right">1</td><td align="right">11.423</td></tr>
+    <tr><td>28</td><td>NACL 0.9% Infus 500ml</td><td align="right">4</td><td align="right">39.284</td></tr>
+    <tr><td>29</td><td>Amiparen Injeksi 500 mg</td><td align="right">1</td><td align="right">140.290</td></tr>
+    <tr><td>30</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">2</td><td align="right">26.240</td></tr>
+    <tr><td>31</td><td>Omeprazol Injeksi 40 mg</td><td align="right">2</td><td align="right">14.208</td></tr>
+    <tr><td>32</td><td>Ondansentron Injeksi 4 mg/ 2 ml</td><td align="right">1</td><td align="right">1.695</td></tr>
+    <tr><td>33</td><td>Furosemid Injeksi 10 mg</td><td align="right">1</td><td align="right">4.435</td></tr>
+    <tr><td>34</td><td>Fenitoin Sulfate injeksi 250mg/ml</td><td align="right">3</td><td align="right">17.049</td></tr>
+    <tr><td>35</td><td>DIAZEPAM INJEKSI 10 MG/2 ML</td><td align="right">2</td><td align="right">0</td></tr>
+    <tr><td>36</td><td>Citicoline Tablet 500 mg</td><td align="right">4</td><td align="right">21.508</td></tr>
+    <tr><td>37</td><td>Azitromycin Tablet 500 Mg</td><td align="right">2</td><td align="right">8.332</td></tr>
+    <tr><td>38</td><td>Underpad</td><td align="right">1</td><td align="right">5.747</td></tr>
+    <tr><td>39</td><td>Spuit 5 Ml</td><td align="right">5</td><td align="right">8.525</td></tr>
+    <tr><td>40</td><td>Spuit 3ml</td><td align="right">5</td><td align="right">6.160</td></tr>
+    <tr><td>41</td><td>Spuit 10 Ml</td><td align="right">5</td><td align="right">12.785</td></tr>
+    <tr><td>42</td><td>Suction Catheter No. 12</td><td align="right">1</td><td align="right">4.120</td></tr>
+    <tr><td>43</td><td>Fenitoin Kapsul 100 mg</td><td align="right">3</td><td align="right">2.535</td></tr>
+    <tr><td>44</td><td>Valproat Tablet Lepas Lambat 500 Mg</td><td align="right">2</td><td align="right">7.882</td></tr>
+    <tr><td>45</td><td>Dexametasone Injeksi 5 mg/ ml</td><td align="right">3</td><td align="right">6.183</td></tr>
+    <tr><td>46</td><td>Ceftazidime 1000 Mg Serbuk Injeksi</td><td align="right">2</td><td align="right">28.928</td></tr>
+    <tr><td>47</td><td>Spuit 1 Ml</td><td align="right">1</td><td align="right">1.804</td></tr>
+    <tr><td>48</td><td>Spuit 10 Ml</td><td align="right">2</td><td align="right">5.114</td></tr>
+    <tr><td>49</td><td>Aqua Pro Injeksi 25 ml</td><td align="right">1</td><td align="right">3.782</td></tr>
+    <tr><td>50</td><td>Fenitoin Kapsul 100 mg</td><td align="right">1</td><td align="right">845</td></tr>
+    <tr><td>51</td><td>NACL 0.9% Infus 500ml</td><td align="right">2</td><td align="right">19.642</td></tr>
+    <tr><td>52</td><td>Amiparen Injeksi 500 mg</td><td align="right">1</td><td align="right">140.290</td></tr>
+    <tr><td>53</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">2</td><td align="right">26.240</td></tr>
+    <tr><td>54</td><td>Omeprazol Injeksi 40 mg</td><td align="right">2</td><td align="right">14.208</td></tr>
+    <tr><td>55</td><td>Furosemid Injeksi 10 mg</td><td align="right">1</td><td align="right">4.435</td></tr>
+    <tr><td>56</td><td>Citicoline Tablet 500 mg</td><td align="right">4</td><td align="right">21.508</td></tr>
+    <tr><td>57</td><td>Azitromycin Tablet 500 Mg</td><td align="right">2</td><td align="right">8.332</td></tr>
+    <tr><td>58</td><td>Fenitoin Kapsul 100 mg</td><td align="right">3</td><td align="right">2.535</td></tr>
+    <tr><td>59</td><td>Valproat Tablet Lepas Lambat 500 Mg</td><td align="right">2</td><td align="right">7.882</td></tr>
+    <tr><td>60</td><td>Dexametasone Injeksi 5 mg/ ml</td><td align="right">3</td><td align="right">6.183</td></tr>
+    <tr><td>61</td><td>Ceftazidime 1000 Mg Serbuk Injeksi</td><td align="right">2</td><td align="right">28.928</td></tr>
+    <tr><td>62</td><td>Underpad</td><td align="right">1</td><td align="right">5.747</td></tr>
+    <tr><td>63</td><td>Spuit 3ml</td><td align="right">5</td><td align="right">6.160</td></tr>
+    <tr><td>64</td><td>Spuit 5 Ml</td><td align="right">5</td><td align="right">8.525</td></tr>
+    <tr><td>65</td><td>Spuit 10 Ml</td><td align="right">5</td><td align="right">12.785</td></tr>
+    <tr><td>66</td><td>Nasal Canul Adult</td><td align="right">1</td><td align="right">8.989</td></tr>
+    <tr><td>67</td><td>Suction Catheter No. 14</td><td align="right">1</td><td align="right">3.584</td></tr>
+    <tr><td>68</td><td>Suction Catheter No. 12</td><td align="right">1</td><td align="right">4.120</td></tr>
+    <tr><td>69</td><td>Nasal Canul Adult</td><td align="right">1</td><td align="right">8.989</td></tr>
+    <tr><td>70</td><td>Suction Catheter No. 14</td><td align="right">1</td><td align="right">3.584</td></tr>
+    <tr><td>71</td><td>Suction Catheter No. 12</td><td align="right">1</td><td align="right">4.120</td></tr>
+    <tr><td>72</td><td>Spuit 50 Ml Catheter Tip (Onemed)</td><td align="right">1</td><td align="right">6.233</td></tr>
+    <tr><td>73</td><td>Omeprazol Injeksi 40 mg</td><td align="right">1</td><td align="right">7.104</td></tr>
+    <tr><td>74</td><td>Dexametasone Injeksi 5 mg/ ml</td><td align="right">2</td><td align="right">4.546</td></tr>
+    <tr><td>75</td><td>Spuit 10 Ml</td><td align="right">5</td><td align="right">12.785</td></tr>
+    <tr><td>76</td><td>Aqua Pro Injeksi 25 ml</td><td align="right">5</td><td align="right">18.910</td></tr>
+    <tr><td>77</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">2</td><td align="right">26.240</td></tr>
+    <tr><td>78</td><td>Omeprazol Injeksi 40 mg</td><td align="right">2</td><td align="right">14.208</td></tr>
+    <tr><td>79</td><td>Furosemid Injeksi 10 mg</td><td align="right">1</td><td align="right">4.435</td></tr>
+    <tr><td>80</td><td>Dexametasone Injeksi 5 mg/ ml</td><td align="right">3</td><td align="right">6.819</td></tr>
+    <tr><td>81</td><td>Ceftazidime 1000 Mg Serbuk Injeksi</td><td align="right">2</td><td align="right">28.928</td></tr>
+    <tr><td>82</td><td>Sucralfate Suspensi 500 mg/5 ml</td><td align="right">1</td><td align="right">9.600</td></tr>
+    <tr><td>83</td><td>Citicoline Tablet 500 mg</td><td align="right">4</td><td align="right">21.508</td></tr>
+    <tr><td>84</td><td>Azitromycin Tablet 500 Mg</td><td align="right">2</td><td align="right">8.332</td></tr>
+    <tr><td>85</td><td>Fenitoin Kapsul 100 mg</td><td align="right">3</td><td align="right">2.535</td></tr>
+    <tr><td>86</td><td>Valproat Tablet Lepas Lambat 500 Mg</td><td align="right">2</td><td align="right">7.882</td></tr>
+    <tr><td>87</td><td>Underpad</td><td align="right">1</td><td align="right">5.747</td></tr>
+    <tr><td>88</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">2</td><td align="right">26.240</td></tr>
+    <tr><td>89</td><td>Omeprazol Injeksi 40 mg</td><td align="right">2</td><td align="right">14.208</td></tr>
+    <tr><td>90</td><td>Furosemid Injeksi 10 mg</td><td align="right">1</td><td align="right">4.435</td></tr>
+    <tr><td>91</td><td>Ceftazidime 1000 Mg Serbuk Injeksi</td><td align="right">2</td><td align="right">28.928</td></tr>
+    <tr><td>92</td><td>Citicoline Tablet 500 mg</td><td align="right">4</td><td align="right">21.508</td></tr>
+    <tr><td>93</td><td>Azitromycin Tablet 500 Mg</td><td align="right">2</td><td align="right">8.332</td></tr>
+    <tr><td>94</td><td>Fenitoin Kapsul 100 mg</td><td align="right">3</td><td align="right">2.535</td></tr>
+    <tr><td>95</td><td>Valproat Tablet Lepas Lambat 500 Mg</td><td align="right">2</td><td align="right">7.882</td></tr>
+    <tr><td>96</td><td>Underpad</td><td align="right">1</td><td align="right">5.747</td></tr>
+    <tr><td>97</td><td>Amiparen Injeksi 500 mg</td><td align="right">2</td><td align="right">280.580</td></tr>
+    <tr><td>98</td><td>NACL 0.9% Infus 500ml</td><td align="right">2</td><td align="right">19.642</td></tr>
+    <tr><td>99</td><td>Spuit 10 Ml</td><td align="right">5</td><td align="right">12.785</td></tr>
+    <tr><td>100</td><td>Spuit 3ml</td><td align="right">4</td><td align="right">4.928</td></tr>
+    <tr><td>101</td><td>Aqua Pro Injeksi 25 ml</td><td align="right">2</td><td align="right">7.564</td></tr>
+    <tr><td>102</td><td>Iv Catheter 22G</td><td align="right">2</td><td align="right">15.770</td></tr>
+    <tr><td>103</td><td>NACL 0.9% Infus 500ml</td><td align="right">2</td><td align="right">19.642</td></tr>
+    <tr><td>104</td><td>Amiparen Injeksi 500 mg</td><td align="right">1</td><td align="right">140.290</td></tr>
+    <tr><td>105</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">2</td><td align="right">26.240</td></tr>
+    <tr><td>106</td><td>Omeprazol Injeksi 40 mg</td><td align="right">2</td><td align="right">14.208</td></tr>
+    <tr><td>107</td><td>Furosemid Injeksi 10 mg</td><td align="right">1</td><td align="right">4.435</td></tr>
+    <tr><td>108</td><td>Ceftazidime 1000 Mg Serbuk Injeksi</td><td align="right">2</td><td align="right">28.928</td></tr>
+    <tr><td>109</td><td>Spuit 10 Ml</td><td align="right">5</td><td align="right">12.785</td></tr>
+    <tr><td>110</td><td>Spuit 3ml</td><td align="right">3</td><td align="right">3.696</td></tr>
+    <tr><td>111</td><td>Aqua Pro Injeksi 25 ml</td><td align="right">3</td><td align="right">11.346</td></tr>
+    <tr><td>112</td><td>Sucralfate Suspensi 500 mg/5 ml</td><td align="right">1</td><td align="right">9.600</td></tr>
+    <tr><td>113</td><td>Citicoline Tablet 500 mg</td><td align="right">2</td><td align="right">10.754</td></tr>
+    <tr><td>114</td><td>Azitromycin Tablet 500 Mg</td><td align="right">1</td><td align="right">4.166</td></tr>
+    <tr><td>115</td><td>Fenitoin Kapsul 100 mg</td><td align="right">3</td><td align="right">2.535</td></tr>
+    <tr><td>116</td><td>Valproat Tablet Lepas Lambat 250 Mg</td><td align="right">2</td><td align="right">4.948</td></tr>
+    <tr><td>117</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">2</td><td align="right">26.240</td></tr>
+    <tr><td>118</td><td>Spuit 10 Ml</td><td align="right">3</td><td align="right">7.671</td></tr>
+    <tr><td>119</td><td>Spuit 3ml</td><td align="right">3</td><td align="right">3.696</td></tr>
+    <tr><td>120</td><td>Aqua Pro Injeksi 25 ml</td><td align="right">2</td><td align="right">7.564</td></tr>
+    <tr><td>121</td><td>Ceftazidime 1000 Mg Serbuk Injeksi</td><td align="right">1</td><td align="right">14.464</td></tr>
+    <tr><td>122</td><td>Azitromycin Tablet 500 Mg</td><td align="right">2</td><td align="right">8.332</td></tr>
+    <tr><td>123</td><td>Ciprofloxacin Infus 2 mg/ml</td><td align="right">2</td><td align="right">26.240</td></tr>
+    <tr><td>124</td><td>Omeprazol Injeksi 40 mg</td><td align="right">2</td><td align="right">14.208</td></tr>
+    <tr><td>125</td><td>Citicoline Tablet 500 mg</td><td align="right">4</td><td align="right">21.508</td></tr>
+    <tr><td>126</td><td>Fenitoin Kapsul 100 mg</td><td align="right">3</td><td align="right">2.535</td></tr>
+    <tr><td>127</td><td>Valproat Tablet Lepas Lambat 500 Mg</td><td align="right">2</td><td align="right">7.882</td></tr>
+    <tr><td>128</td><td>Spuit 10 Ml</td><td align="right">3</td><td align="right">7.671</td></tr>
+    <tr><td>129</td><td>Spuit 3ml</td><td align="right">2</td><td align="right">2.464</td></tr>
+    <tr><td>130</td><td>Spuit 50ml Chateter Tip</td><td align="right">1</td><td align="right">8.913</td></tr>
+    <tr><td>131</td><td>Aqua Pro Injeksi 25 ml</td><td align="right">1</td><td align="right">3.782</td></tr>
+    <tr><td>132</td><td>Fenitoin Kapsul 100 mg</td><td align="right">24</td><td align="right">20.280</td></tr>
+    <tr><td>133</td><td>Valproat Tablet Lepas Lambat 500 Mg</td><td align="right">16</td><td align="right">63.056</td></tr>
+    <tr><td>134</td><td>Asam Folat Tablet</td><td align="right">7</td><td align="right">637</td></tr>
+    <tr><td>135</td><td>Ciprofloxacin Kaplet 500 mg</td><td align="right">10</td><td align="right">7.690</td></tr>
+    <tr><td>136</td><td>Aspilet Tablet Salut Enterik 100 mg</td><td align="right">8</td><td align="right">4.960</td></tr>
+    <tr><td>137</td><td>Clopidogrel Tablet 75 mg</td><td align="right">8</td><td align="right">7.312</td></tr>
+    <tr class="sub-row"><td colspan="3">Sub total Penjualan</td><td align="right">2.158.418</td></tr>
+  </table>
+
+  <table class="final-tbl">
+    <tr class="bold"><td>Total Rincian Biaya</td><td class="num"><span class="correct">15.522.708</span> <span class="note-inline">(Total Rp. 13.364.290 + Sub total Penjualan 2.158.418)</span></td></tr>
+  </table>
+
   <p class="note">Rincian 123 baris. Halaman <a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">data-tagihan</a> menampilkan <strong>Total Rp. 13.364.290</strong> (sama di semua halaman) dan <strong>Sub total Penjualan 2.460.018</strong>. Yang <span class="wrong">salah tampil</span> di halaman itu: <strong>Total Tagihan = 16.116.308</strong>. Nilai benar = <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a>.</p>
 
   <hr style="border:none;border-top:1px dashed #000;width:100%;max-width:600px;margin:5px 0;">
@@ -245,6 +428,7 @@
     <tr><td>Diskon</td><td class="num">0</td></tr>
     <tr><td>Uang Muka</td><td class="num">0</td></tr>
     <tr><td>Pembulatan</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">0</a> <span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-ringkas?id_visit=197876" target="_blank" rel="noopener noreferrer">92 (ringkas, salah)</a></span></td></tr>
+    <tr><td>Jasa Pelayanan</td><td class="num">292.000</td></tr>
     <tr class="bold"><td>Total Tagihan</td><td class="num"><span class="wrong"><a href="http://103.147.236.140/billing/report/data-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">16.116.308 (data-tagihan, salah)</a></span> <span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-gabung-ringkas?id_visit=197876" target="_blank" rel="noopener noreferrer">15.563.900 (ringkas, salah)</a></span> <span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">0 (ringkas-new, bug)</a></span> <span class="correct">→ <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a></span></td></tr>
     <tr class="bold"><td>Bayar</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">4.618.025</a></td></tr>
     <tr><td>Kembali</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">0</a></td></tr>
@@ -253,7 +437,9 @@
   </table>
   
 </div>
+  </div>
 
+  <div class="tab-content" id="content-struk">
 <!-- ===== CETAK STRUK (sesuai halaman Morbis: rincian biaya + obat + ringkasan) ===== -->
 <div class="card">
   <table class="tabel-judul">
@@ -594,7 +780,9 @@
   </table>
   <p class="note" style="text-align:center;">Struk ini merupakan bukti pembayaran yang sah.</p>
 </div>
+  </div>
 
+  <div class="tab-content" id="content-penjelasan">
 <p class="no-print" style="font-size:10px; color:#666; margin-top:12px;">
   Hanya dua jenis cetak: <strong>Cetak Detail</strong> (rincian + ringkasan akhir) dan <strong>Cetak Struk</strong> (rincian biaya + 137 item obat + ringkasan — sesuai halaman <code>pembayaran-ringkas-new</code>).
   Hilangkan cetak Lengkap/Singkat/Gabung/Ringkas yang membingungkan.
@@ -690,6 +878,7 @@
   </table>
   <p class="note" style="margin-bottom:0;">Nilai acuan (benar): Total Tagihan 15.814.708 · Klaim BPJS 11.196.683 · Tanggungan Pasien 4.618.025 · Dibayar 4.618.025 · Kembali 0. <strong>Sisa 0 dan Status Lunas adalah turunan</strong> — Morbis menampilkan “Kembali 0”, bukan baris “Sisa Tagihan”/“Status”. Semua URL memakai <code>id_visit=197876</code>; <code>detail_biling_new</code> dan <code>pembayaran-new/detail-billing</code> juga wajib <code>id_billing=307559&amp;id_pasien=13924&amp;pasien=IRIADI</code>.</p>
 </div>
+  </div>
 
 </div>
 </body>
