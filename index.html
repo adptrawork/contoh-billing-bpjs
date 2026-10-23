@@ -773,9 +773,9 @@
   </table>
 
   <table class="final-tbl" style="max-width:600px;margin-top:16px;">
-    <tr><td class="center">Yang Menyerahkan</td><td class="center">Kota Jambi, 07 September 2026</td><td class="center">Yang Menerima</td></tr>
-    <tr><td class="center" style="height:36px;">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
-    <tr><td class="center">IRIADI</td><td>&nbsp;</td><td class="center">Apotek Rawat Jalan</td></tr>
+    <tr><td class="center">Yang Menyerahkan</td><td class="center">Yang Menerima</td></tr>
+    <tr><td class="center" style="height:36px;">&nbsp;</td><td class="center" style="height:36px;">&nbsp;</td></tr>
+    <tr><td class="center">IRIADI</td><td class="center">Kasir</td></tr>
   </table>
   <p class="note" style="text-align:center;">Struk ini merupakan bukti pembayaran yang sah.</p>
 </div>
@@ -838,10 +838,10 @@
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="wrong">Pembulatan 92</span> dan <span class="wrong">Total Tagihan 15.563.900</span> — salah. Bayar 4.618.025 benar. Baris Klaim &amp; Sisa Tagihan ada <em>di dalam komentar HTML</em> (tidak tampil) dan berisi error <code>Undefined index: KLAIM_BPJS</code></td>
       </tr>
       <tr>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">pembayaran-gabung-asuransi <span class="note-inline">(akun apotek_rajal → 404; akun irfan (asuransi) → 200, menampilkan Nota Pembayaran klaim farmasi 2.460.018)</span></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">pembayaran-gabung-asuransi</td>
         <td style="padding:4px;border-bottom:1px solid #ccc;">Saldo Pembayaran setelah pembulatan</td>
         <td style="padding:4px;border-bottom:1px solid #ccc;">2.460.018</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Perhitungan terpisah (asuransi) — bukan sumber untuk total/tagihan BPJS. Akses terbatas: akun apotek_rajal → 404; akun irfan (asuransi) → 200, menampilkan Nota Pembayaran klaim farmasi 2.460.018</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Perhitungan terpisah (asuransi) — bukan sumber untuk total/tagihan BPJS.</td>
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/verifikasi-billing/report/nota-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">verifikasi-billing / report / nota-tagihan</a></td>
@@ -875,7 +875,7 @@
       </tr>
     </tbody>
   </table>
-  <p class="note" style="margin-bottom:0;">Nilai acuan (benar): Total Tagihan 15.814.708 · Klaim BPJS 11.196.683 · Tanggungan Pasien 4.618.025 · Dibayar 4.618.025 · Kembali 0. <strong>Sisa 0 dan Status Lunas adalah turunan</strong> — Morbis menampilkan “Kembali 0”, bukan baris “Sisa Tagihan”/“Status”. Semua URL memakai <code>id_visit=197876</code>; <code>detail_biling_new</code> dan <code>pembayaran-new/detail-billing</code> juga wajib <code>id_billing=307559&amp;id_pasien=13924&amp;pasien=IRIADI</code>.</p>
+  <p class="note" style="margin-bottom:0;">Nilai acuan (benar): Total Tagihan 15.814.708 · Klaim BPJS 11.196.683 · Tanggungan Pasien 4.618.025 · Dibayar 4.618.025 · Kembali 0. <strong>Sisa 0 dan Status Lunas adalah turunan</strong>. Semua URL memakai <code>id_visit=197876</code>; <code>detail_biling_new</code> dan <code>pembayaran-new/detail-billing</code> juga wajib <code>id_billing=307559&amp;id_pasien=13924&amp;pasien=IRIADI</code>.</p>
 </div>
   </div>
 
