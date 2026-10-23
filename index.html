@@ -753,20 +753,20 @@
   </table>
 
   <table class="final-tbl" style="max-width:600px;margin-top:8px;">
-    <tr><td>Diskon Penjualan</td><td class="num">0</td></tr>
-    <tr><td>Sub total Penjualan</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">2.158.418</a></td></tr>
-    <tr><td>Jasa Pelayanan</td><td class="num">292.000</td></tr>
-    <tr><td>Total</td><td class="num">0 <span class="note-inline">(tampil 0)</span></td></tr>
+    <tr><td>Sub Total Layanan Medis / Tindakan</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">13.364.290</a></td></tr>
+    <tr><td>Sub Total Penjualan (Farmasi/Obat)</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">2.158.418</a></td></tr>
+    <tr><td>Jasa Pelayanan (Jasa Medis/Paramudis)</td><td class="num">292.000</td></tr>
     <tr><td>Jasa Sarana</td><td class="num">0</td></tr>
     <tr><td>Biaya Administrasi</td><td class="num">0</td></tr>
     <tr><td>Biaya Materai</td><td class="num">0</td></tr>
-    <tr><td>Klaim Asuransi</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">11.196.683</a></td></tr>
     <tr><td>Diskon</td><td class="num">0</td></tr>
-    <tr><td>Uang Muka</td><td class="num">0</td></tr>
     <tr><td>Pembulatan</td><td class="num">0</td></tr>
-    <tr class="bold"><td>Total Tagihan</td><td class="num"><span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">0 (struk, bug)</a></span> <span class="correct">&rarr; <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a></span></td></tr>
+    <tr class="bold" style="border-top:2px solid #000;"><td>TOTAL TAGIHAN (KOTOR)</td><td class="num"><span class="wrong"><a href="http://103.147.236.140/billing/report/pembayaran-ringkas-new?id_visit=197876" target="_blank" rel="noopener noreferrer">0 (struk, bug)</a></span> <span class="correct">&rarr; <a href="http://103.147.236.140/billing/report/data-tagihan-v2?id_visit=197876" target="_blank" rel="noopener noreferrer">15.814.708</a></span></td></tr>
     <tr><td>( NOL )</td><td class="num note-inline">terbilang dari Total Tagihan 0 (ikut bug)</td></tr>
-    <tr class="bold"><td>Bayar</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">4.618.025</a></td></tr>
+    <tr><td>Ditanggung Jaminan / Klaim BPJS</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">11.196.683</a></td></tr>
+    <tr class="bold" style="border-top:2px solid #000;"><td>TANGGUNGAN PASIEN (Sisa yang harus dibayar)</td><td class="num">4.618.025 <span class="note-inline">(TOTAL TAGIHAN − Klaim BPJS)</span></td></tr>
+    <tr><td>Uang Muka / Deposit</td><td class="num">0</td></tr>
+    <tr class="bold"><td>Bayar (Tunai/Non-Tunai)</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">4.618.025</a></td></tr>
     <tr><td>Kembali</td><td class="num"><a href="http://103.147.236.140/billing/report/pembayaran-gabung?id_visit=197876" target="_blank" rel="noopener noreferrer">0</a></td></tr>
     <tr class="bold"><td>Sisa Tagihan</td><td class="num">0 <span class="note-inline">(turunan)</span></td></tr>
     <tr class="bold"><td>Status</td><td class="num">Lunas <span class="note-inline">(turunan)</span></td></tr>
@@ -838,10 +838,10 @@
         <td style="padding:4px;border-bottom:1px solid #ccc;"><span class="wrong">Pembulatan 92</span> dan <span class="wrong">Total Tagihan 15.563.900</span> — salah. Bayar 4.618.025 benar. Baris Klaim &amp; Sisa Tagihan ada <em>di dalam komentar HTML</em> (tidak tampil) dan berisi error <code>Undefined index: KLAIM_BPJS</code></td>
       </tr>
       <tr>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">pembayaran-gabung-asuransi <span class="note-inline">(404 untuk akun apotek_rajal — perlu akses asuransi)</span></td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">pembayaran-gabung-asuransi <span class="note-inline">(akun apotek_rajal → 404; akun irfan (asuransi) → 200, menampilkan Nota Pembayaran klaim farmasi 2.460.018)</span></td>
         <td style="padding:4px;border-bottom:1px solid #ccc;">Saldo Pembayaran setelah pembulatan</td>
         <td style="padding:4px;border-bottom:1px solid #ccc;">2.460.018</td>
-        <td style="padding:4px;border-bottom:1px solid #ccc;">Perhitungan terpisah (asuransi) — bukan sumber untuk total/tagihan BPJS. Halaman tidak dapat diakses dengan akun apotek_rajal (404)</td>
+        <td style="padding:4px;border-bottom:1px solid #ccc;">Perhitungan terpisah (asuransi) — bukan sumber untuk total/tagihan BPJS. Akses terbatas: akun apotek_rajal → 404; akun irfan (asuransi) → 200, menampilkan Nota Pembayaran klaim farmasi 2.460.018</td>
       </tr>
       <tr>
         <td style="padding:4px;border-bottom:1px solid #ccc;"><a href="http://103.147.236.140/billing/verifikasi-billing/report/nota-tagihan?id_visit=197876" target="_blank" rel="noopener noreferrer">verifikasi-billing / report / nota-tagihan</a></td>
